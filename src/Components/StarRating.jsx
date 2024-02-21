@@ -12,13 +12,18 @@ const starContainer = {
 
 const text = {
     color: '#FFD700',
-    fontSize:'30px'
+    fontSize:'24px'
 }
 
-function StarRating({star = 5}){
+function StarRating({star = 5,onSetRating}){
 
 const [rating, setRating] = useState(0)
 const [tempRating,setTempRating] = useState(0)
+
+function handleSetRating(rating){
+    setRating(rating)
+    onSetRating(rating)
+}
 
     return(
         <div style = {containerStyle}>
@@ -26,7 +31,7 @@ const [tempRating,setTempRating] = useState(0)
             {Array.from({length:star},(_,i)=>(
             <>
                 <Star key={i} 
-                      onRate = {()=>setRating(i+1)} 
+                      onRate = {()=>handleSetRating(i+1)} 
                       flag={tempRating ? tempRating >= i+1 : rating >= i+1}
                       onMouseHover = {()=>setTempRating(i+1)}
                       onMourseLeave = {()=>setTempRating(0)}
@@ -41,8 +46,8 @@ const [tempRating,setTempRating] = useState(0)
 }
 
 const StarStyle = {
-    width:'50px',
-    height:'50px',
+    width:'24px',
+    height:'24px',
     display:'block',
     cursor:'pointer'
 }

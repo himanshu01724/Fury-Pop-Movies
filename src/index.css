@@ -7,6 +7,7 @@
     --color-background-500: #2b3035;
     --color-background-900: #212529;
     --color-red: #fa5252;
+    --color-red-light:#ed8383;
     --color-red-dark: #e03131;
   }
   
@@ -37,7 +38,7 @@
     align-items: center;
     height: 7.2rem;
     padding: 0 3.2rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-red);
     border-radius: 0.9rem;
   }
   
@@ -101,7 +102,7 @@
     color: var(--color-text);
   
     /* background-color: var(--color-background-900); */
-    background-color: var(--color-primary-light);
+    background-color: var( --color-background-900);
   }
   
   .search::placeholder {

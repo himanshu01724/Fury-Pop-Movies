@@ -72,7 +72,7 @@ useEffect(()=>{
 async function fetchMovieData(){
   try{
     setIsLoading(true)
-    const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=970c7fd3&s=${query}`)
+    const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=970c7fd3&s=${query}`)
     if(!response.ok){
       throw new Error('Network Error While Processing Your request')
     }
@@ -331,7 +331,7 @@ useEffect(()=>{
 async function fetchSelectedId(){
   try{
     setLoader(true)
-    const response = await fetch(`http://www.omdbapi.com/?apikey=970c7fd3&i=${selectedId}`)
+    const response = await fetch(`https://www.omdbapi.com/?apikey=970c7fd3&i=${selectedId}`)
     if(!response.ok){
       throw new Error(`Network Error While Processing Your Request`)
     }

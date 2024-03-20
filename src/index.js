@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import Appv1 from './Appv1'
+import AppUsingContextApi from './AppUsingContextApi'
+import {MovieContextApi} from './MovieContextApi'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 
 root.render(<>
-    <App/>
+<MovieContextApi>
+    <AppUsingContextApi/>
+</MovieContextApi>
     </>
 )

@@ -3,7 +3,7 @@ import "./index.css"
 import Navbar from './Components/Navbar'
 import Main from './Components/Main'
 import StarRating from './Components/StarRating'
-import {MovieContextApi, MovieContext} from "./MovieContextApi";
+import { MovieContext} from "./MovieContextApi";
 
 
   
@@ -13,7 +13,7 @@ export default function AppUsingContextApi() {
   const {isLoading, selectedId} = useContext(MovieContext)
 
     return (
-      <MovieContextApi>
+      <>
         <Navbar> 
             <SearchBox/>
             <Content/>
@@ -33,7 +33,7 @@ export default function AppUsingContextApi() {
             }
           </WatchedBox>  
         </Main>
-      </MovieContextApi>
+      </>
     );
   }
 

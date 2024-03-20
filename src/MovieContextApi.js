@@ -4,7 +4,7 @@ import React, { useState, useEffect, createContext } from "react";
 const MovieContext = createContext()
 
 
-function MovieContextApi() {
+function MovieContextApi({children}) {
 
 const [movies, setMovies] = useState([]);
 const [watched,setWatched] = useState([]);
@@ -67,7 +67,7 @@ return(
                 onDeleteMovie : handleDeleteMovieFromList
                 }}
       >
-
+        {children}
       </MovieContext.Provider>
 )
 
